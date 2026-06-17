@@ -1,4 +1,4 @@
-# Sales-Data-
+# Sales-Data
 Analysics of data
 
 **##Project Overview**
