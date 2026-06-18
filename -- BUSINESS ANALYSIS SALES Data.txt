@@ -1,12 +1,6 @@
--- BUSINESS ANALYSIS: SALES Data
+#BUSINESS ANALYSIS:SALES Data
 
--- Question 1: What is the total revenue and total units sold for the year 2025?
-SELECT 
-    SUM (REPLACE(sales_amount, '$', ''):: numeric) AS total_revenue,
-    SUM(quantity) AS total_units_sold
-FROM sales_data
-
--- Question 2: Which product categories generate the highest revenue?
+-- Question 1: Which product categories generate the highest revenue?
 SELECT 
     product_category,
     SUM (REPLACE(sales_amount, '$', ''):: numeric) AS category_revenue,
@@ -14,7 +8,7 @@ FROM sales_data
 GROUP BY product_category
 ORDER BY category_revenue DESC;
 
--- Question 3: Which month creates the most revenue?
+-- Question 2: Which month creates the most revenue?
 SELECT 
    extract(month from "hire_date" ) AS sales_month,
     sales_amount,
